@@ -13,7 +13,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField 'String', 'HOST', '"http://fake.com"'
+        buildConfigField 'String', 'HOST', '"https://restcountries.eu/"'
     }
     buildTypes {
         release {
@@ -30,7 +30,12 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    def supportVersion = "27.1.1"
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
+    implementation "com.android.support:cardview-v7:$supportVersion"
+    implementation "com.android.support:design:$supportVersion"
+
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
     def archVersion = "1.1.1"

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">architecture</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="countries_list_screen_title">Countries</string>
+    <string name="countries_list_name">%1$s (%2$s)</string>
+    <string name="countries_list_region">Region: %1$s</string>
+    <string name="countries_list_capital">Capital: %1$s</string>
+    <string name="countries_list_population">Population: %1$d</string>
+    <string name="countries_list_error">Couldn\'t load countries</string>
+
 </resources>
