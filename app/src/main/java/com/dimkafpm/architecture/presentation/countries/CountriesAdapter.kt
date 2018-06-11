@@ -3,11 +3,11 @@ package com.dimkafpm.architecture.presentation.countries
 import android.annotation.SuppressLint
 import android.view.ViewGroup
 import android.widget.TextView
-import az.sinam.p2p.presentation.core.viewbinding.bindView
 import com.dimkafpm.architecture.R
 import com.dimkafpm.architecture.core.extensions.string
 import com.dimkafpm.architecture.core.view.recyclerview.BaseRecyclerAdapter
 import com.dimkafpm.architecture.core.view.recyclerview.BaseViewHolder
+import com.dimkafpm.architecture.core.viewbinding.bindView
 import com.dimkafpm.architecture.domain.model.Country
 
 class CountriesAdapter() : BaseRecyclerAdapter<Country, CountriesAdapter.CountryViewHolder>() {

@@ -1,4 +1,4 @@
-package az.sinam.p2p.presentation.core.viewbinding
+package com.dimkafpm.architecture.core.viewbinding
 
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.View
