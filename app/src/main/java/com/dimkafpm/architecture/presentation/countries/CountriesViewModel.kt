@@ -4,6 +4,7 @@ import android.arch.lifecycle.*
 import android.content.res.Resources
 import com.dimkafpm.architecture.data.CountriesRepo
 import com.dimkafpm.architecture.domain.model.Country
+import io.reactivex.MaybeObserver
 import io.reactivex.disposables.Disposable
 
 class CountriesViewModel(private val repository: CountriesRepo) : ViewModel(), LifecycleObserver {
@@ -22,21 +23,22 @@ class CountriesViewModel(private val repository: CountriesRepo) : ViewModel(), L
         else -> visitorsCount.observe(view.getLifeCycleOwner(), Observer<List<Country>> { countries -> countries?.run { view.setCountries(this) } })
     }
 
-    inner class CountriesObserver : io.reactivex.Observer<List<Country>> {
-        override fun onComplete() {
-            state = MainScreenState.FINISH_LOADING
-        }
+    inner class CountriesObserver : MaybeObserver<List<Country>> {
 
-        override fun onSubscribe(d: Disposable) {
-        }
-
-        override fun onNext(countries: List<Country>) {
+        override fun onSuccess(countries: List<Country>) {
             visitorsCount.value = countries
         }
 
         override fun onError(e: Throwable) {
             state = MainScreenState.ERROR
             view.showCountriesNotLoaded({ this@CountriesViewModel.loadCountries() })
+        }
+
+        override fun onComplete() {
+            state = MainScreenState.FINISH_LOADING
+        }
+
+        override fun onSubscribe(d: Disposable) {
         }
     }
 

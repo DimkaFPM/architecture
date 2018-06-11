@@ -7,5 +7,5 @@ import com.dimkafpm.architecture.data.db.model.CountryDB
 
 @Database(entities = [CountryDB::class], version = 1)
 abstract class DbDataSource : RoomDatabase() {
-    abstract fun countryDay(): CountryDao
+    abstract fun countryDao(): CountryDao
 }

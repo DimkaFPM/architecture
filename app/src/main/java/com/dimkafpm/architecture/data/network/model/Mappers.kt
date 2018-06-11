@@ -1,6 +1,11 @@
 package com.dimkafpm.architecture.data.network.model
 
-fun CountryRemote.toDomain() = com.dimkafpm.architecture.domain.model.Country(this.name,
+import com.dimkafpm.architecture.domain.model.Country
+
+fun CountryRemote.toDomain() =
+        Country(this.alpha2Code,
+        this.alpha3Code,
+        this.name,
         this.nativeName,
         this.region,
         this.capital,

@@ -1,6 +1,8 @@
 package com.dimkafpm.architecture.domain.model
 
-class Country(val name: String,
+class Country(val alpha2Code: String,
+              val alpha3Code: String,
+              val name: String,
               val nativeName: String,
               val region: String,
               val capital: String,
