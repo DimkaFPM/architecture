@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import com.dimkafpm.architecture.App
 import com.dimkafpm.architecture.BuildConfig
 import com.dimkafpm.architecture.data.CountriesRepo
+import com.dimkafpm.architecture.data.db.DbContract
 import com.dimkafpm.architecture.data.db.DbDataSource
 import com.dimkafpm.architecture.data.network.NetworkDataStore
 import com.dimkafpm.architecture.data.network.RestClientBuilder
@@ -40,7 +41,9 @@ class AppModule(val app: App) {
     @Singleton
     internal fun provideDbDataSource(): DbDataSource {
         val databaseName = "countries_database"
-        return Room.databaseBuilder(app, DbDataSource::class.java, databaseName).build()
+        return Room.databaseBuilder(app, DbDataSource::class.java, databaseName)
+                .addMigrations(DbContract.MIGRATION_1_2)
+                .build()
     }
 
     @Provides

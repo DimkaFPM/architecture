@@ -6,6 +6,7 @@ class Country(val alpha2Code: String,
               val nativeName: String,
               val region: String,
               val capital: String,
+              val borders: List<String>,
               val currencies: List<String>,
               val languages: List<String>,
               val population: Int)

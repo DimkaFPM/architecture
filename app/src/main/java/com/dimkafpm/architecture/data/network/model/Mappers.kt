@@ -9,6 +9,7 @@ fun CountryRemote.toDomain() =
         this.nativeName,
         this.region,
         this.capital,
+        this.borders,
         this.currencies,
         this.languages,
         this.population)

@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 import com.dimkafpm.architecture.data.db.dao.CountryDao
 import com.dimkafpm.architecture.data.db.model.CountryDB
 
-@Database(entities = [CountryDB::class], version = 1, exportSchema = true)
+@Database(entities = [CountryDB::class], version = 2, exportSchema = true)
 abstract class DbDataSource : RoomDatabase() {
     abstract fun countryDao(): CountryDao
 }
