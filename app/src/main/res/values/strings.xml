@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">architecture</string>
+    <string name="app_name">Architecture components</string>
 
     <string name="retry">Retry</string>
 
@@ -9,5 +9,10 @@
     <string name="countries_list_capital">Capital: %1$s</string>
     <string name="countries_list_population">Population: %1$d</string>
     <string name="countries_list_error">Couldn\'t load countries</string>
+    <string name="countries_demo_description">Displays list of countries. Show how to work with LiveData, Room from architecture components.</string>
+
+
+    <string name="news_list_screen_title">News</string>
+    <string name="news_demo_description">Displays list of news. Show how to work with PagedListAdapter from architecture components.</string>
 
 </resources>

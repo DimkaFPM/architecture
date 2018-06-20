@@ -30,7 +30,7 @@ class CountriesActivity : AppCompatActivity(), CountriesView {
     override fun onCreate(savedInstanceState: Bundle?) {
         createActivityComponent().inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_countries)
 
         root = findViewById(R.id.root)
 
